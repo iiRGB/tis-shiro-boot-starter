@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.tis.tools.config.DubboConfig,\
+  org.tis.tools.config.DubboReferenceConfig,\
+  org.tis.tools.config.ShiroAutoConfig

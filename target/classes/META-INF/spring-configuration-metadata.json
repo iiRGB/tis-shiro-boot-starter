@@ -1,0 +1,20 @@
+{
+  "groups": [{
+    "name": "abf.shiro.dubbo",
+    "type": "org.tis.tools.config.DubboProperties",
+    "sourceType": "org.tis.tools.config.DubboProperties"
+  }],
+  "properties": [
+    {
+      "name": "abf.shiro.dubbo.application",
+      "type": "com.alibaba.dubbo.config.ApplicationConfig",
+      "sourceType": "org.tis.tools.config.DubboProperties"
+    },
+    {
+      "name": "abf.shiro.dubbo.registry",
+      "type": "com.alibaba.dubbo.config.RegistryConfig",
+      "sourceType": "org.tis.tools.config.DubboProperties"
+    }
+  ],
+  "hints": []
+}

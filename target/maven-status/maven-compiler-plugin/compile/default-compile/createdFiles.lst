@@ -1,0 +1,10 @@
+org\tis\tools\config\DubboConfig.class
+org\tis\tools\config\DubboProperties.class
+org\tis\tools\shiro\authenticationToken\UserIdPasswordIdentityToken.class
+org\tis\tools\shiro\credentials\RetryLimitHashedCredentialsMatcher.class
+org\tis\tools\shiro\filter\AbfLoginFilter.class
+org\tis\tools\shiro\realm\UserRealm.class
+org\tis\tools\shiro\filter\AbfPermissionFilter.class
+META-INF\spring-configuration-metadata.json
+org\tis\tools\config\DubboReferenceConfig.class
+org\tis\tools\config\ShiroAutoConfig.class
