@@ -1,0 +1,41 @@
+{
+  "properties": [
+    {
+      "name": "abf.shiro.dubbo.application.name",
+      "type": "java.lang.String",
+      "description": "应用名.",
+      "sourceType": "com.alibaba.dubbo.config.ApplicationConfig"
+    },
+    {
+      "name": "abf.shiro.dubbo.application.owner",
+      "type": "java.lang.String",
+      "description": "拥有者.",
+      "sourceType": "com.alibaba.dubbo.config.ApplicationConfig"
+    },
+    {
+      "name": "abf.shiro.dubbo.application.organization",
+      "type": "java.lang.String",
+      "description": "组织.",
+      "sourceType": "com.alibaba.dubbo.config.ApplicationConfig"
+    },
+    {
+      "name": "abf.shiro.dubbo.application.logger",
+      "type": "java.lang.String",
+      "description": "日志.",
+      "sourceType": "com.alibaba.dubbo.config.ApplicationConfig"
+    },
+    {
+      "name": "abf.shiro.dubbo.registry.address",
+      "type": "java.lang.String",
+      "description": "地址.",
+      "sourceType": "com.alibaba.dubbo.config.RegistryConfig"
+    },
+    {
+      "name": "abf.shiro.dubbo.registry.timeout",
+      "type": "java.lang.String",
+      "description": "超时等待.",
+      "sourceType": "com.alibaba.dubbo.config.RegistryConfig"
+    }
+  ],
+  "hints": []
+}
