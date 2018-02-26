@@ -190,7 +190,7 @@ public class ShiroAutoConfig {
      */
     @Bean
     public ShiroFilterFactoryBean shiroFilter(@Value("${abf.shiro.anons}")String anons,
-                                              @Value("${abf.shiro.permission.enable}")Boolean permEnable) {
+                                              @Value("${abf.shiro.permission.enabled}")Boolean permEnable) {
         ShiroFilterFactoryBean shiroFilter = new ShiroFilterFactoryBean();
         shiroFilter.setSecurityManager(securityManager());
 
