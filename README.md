@@ -22,7 +22,7 @@ abf:
     enabled: true #是否启用
     anons:  # 可匿名掉用的接口
     permission:
-      enable: true # 是否开启角色接口控制
+      enabled: true # 是否开启角色接口控制
     dubbo:
       application:
         name: tools-web-shiro 
@@ -32,6 +32,4 @@ abf:
       registry:
         address: zookeeper://139.196.145.67:2181
         timeout: 50000
-      log4j:
-        file: logs/tools-web-shiro.log
 ```
