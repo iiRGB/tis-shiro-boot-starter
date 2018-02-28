@@ -1,6 +1,5 @@
 package org.tis.tools.config;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authz.ModularRealmAuthorizer;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO;
@@ -30,6 +29,7 @@ import org.tis.tools.shiro.filter.AbfPermissionFilter;
 import org.tis.tools.shiro.realm.UserRealm;
 
 import javax.servlet.Filter;
+import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -108,6 +108,8 @@ public class ShiroAutoConfig {
         sessionManager.setSessionIdCookie(sessionIdCookie());
         return sessionManager;
     }
+
+
     /**
      * 会话DAO
      * @return
@@ -170,8 +172,9 @@ public class ShiroAutoConfig {
     @Bean
     public ModularRealmAuthorizer authorizer() {
         ModularRealmAuthorizer modularRealmAuthorizer = new ModularRealmAuthorizer();
+        modularRealmAuthorizer.setRealms(Collections.singleton(abfShiroRealm()));
         modularRealmAuthorizer.setPermissionResolver(this.abfPermission());
-        return new ModularRealmAuthorizer();
+        return modularRealmAuthorizer;
     }
 
     /**
@@ -206,11 +209,9 @@ public class ShiroAutoConfig {
          *
          */
         Map<String, String> hashMap = new LinkedHashMap<>();
-        if (StringUtils.isNotBlank(anons)) {
-            for (String anon : anons.split(",")) {
-                hashMap.put(anon, "anon");
-            }
-        }
+        hashMap.put("/AcAuthenticationController/checkUserStatus", "anon");
+        hashMap.put("/AcAuthenticationController/login", "anon");
+        hashMap.put("/AcAuthenticationController/**", "abfLogin");
         if (permEnable) {
             hashMap.put("/**", "abfLogin,abfPerm");
         } else {
